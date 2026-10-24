@@ -52,10 +52,13 @@ With some tweaking and contextual inference, "uwamu" is likely to be "a'wamum" o
 "Anwamum si'r seru?" - "Human look like?" (Do I look like a human?)
 
 
-Limitations, inconsistencies, and assumptions
----------------------------------------------
+Notes, limitations, inconsistencies, and assumptions
+----------------------------------------------------
 
-This tool is based on the Halo Reach cypher, posted on Halo Waypoint in 2026. There are some missing letters and sounds (e.g. words including "you" and "zebra" are not cypherable using this cypher (Y has no cypher output when at the start of a word, and Z has no cypher outputs at all)).
+This tool is based on the Halo Reach cypher, posted on Halo Waypoint in 2026.
+https://www.halowaypoint.com/en-gb/news/canon-fodder-heart-and-soell
+
+There are some missing letters and sounds (e.g. words including "you" and "zebra" are not cypherable using this cypher (Y has no cypher output when at the start of a word, and Z has no cypher outputs at all)).
 
 The provided samples also do not cover every listed letter cyphering, 
 e.g. there is no given example of an "r" becoming a "w". 
