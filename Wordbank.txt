@@ -1,0 +1,8 @@
+safe,shuku
+up,'wach
+meal,yar
+go,wort
+me,pa
+more,mamu
+yes,wir
+good,wort'k

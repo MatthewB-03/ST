@@ -1,0 +1,78 @@
+Commands
+--------
+
+"cypher (words)"  - cyphers a sentence of words, adds new words to the word bank
+
+"decypher (word)" - outputs potential decypherings of an input word
+
+
+
+"cipher" and "decipher" are also accepted.
+
+
+Cypher/cipher command
+---------------------
+
+e.g. "cypher go away" -> "Wort uzuda"
+
+This command attempts to cypher all words following 'cypher'/'cipher', and outputs a cyphered version. Surrounding letters are checked to approximate sound, e.g. the o in "c(o)ve m(o)ve" results in "r(a)zu p(i)zu", due to the 'ohv' & 'oov' sounds respectively.
+
+Newly cyphered words are also added to the word bank for future reference. If a word exists in the word bank, this will be used instead of cyphering it. Words can also be manually entered into the word bank. e.g. "go,wort" is already in the word bank, so "Go" will cypher to "Wort" instead of "A'a".
+
+Not all words can be translated using the cypher, for example "quick" is not cypherable, as there is no cypher output for the letter q. 
+Alternative words will need to be used in these cases, e.g. "fast" -> "kushp"
+
+
+
+Decypher/decipher command
+-------------------------
+
+e.g. "decypher uzuda" ->       "avax
+				avay
+				avex
+				avey
+				awax
+				away		<---- away
+				awex. . .
+				
+
+Because many letters & letter combinations can result in the same cypher output, and because of the possibility of mishearing sounds, full algorithmic decyphering hasn't been implemented here. This command acts more like a tool to assist in decyphering words. 
+
+When a potential cyphered word is input, every possible letter combination that could feasibly result in that word is output. The processing of a particular combination stops if a letter has no possible cypher sources (e.g. no letter results in a v when cyphered), and the combination up to that point is output with a warning.
+
+It may require a process of trial & improvement to get a satisfying result, especially when listening to audio dialogue. 
+
+Example decyphering:
+An elite taking friendly fire, can respond with a phrase that sounds like "uwamu sir seru", 
+
+"si'r" and "seru" are direct cyphers of "look" and "like", but "uwamu" has no immediate decypherings,
+
+With some tweaking and contextual inference, "uwamu" is likely to be "a'wamum" or "anwamum", cypherings of "human".
+
+"Anwamum si'r seru?" - "Human look like?" (Do I look like a human?)
+
+
+Limitations, inconsistencies, and assumptions
+---------------------------------------------
+
+This tool is based on the Halo Reach cypher, posted on Halo Waypoint in 2026. There are some missing letters and sounds (e.g. words including "you" and "zebra" are not cypherable using this cypher (Y has no cypher output when at the start of a word, and Z has no cypher outputs at all)).
+
+The provided samples also do not cover every listed letter cyphering, 
+e.g. there is no given example of an "r" becoming a "w". 
+There's also at least one apparent inconsistency in the samples: 'R ("rrr") = W': "he(r)etics" is cyphered as "a'u(m)upersh", and not "a'u(w)upersh", despite the apparent "rrr" sound.
+
+As a result, I've had to make concessions and assumptions on potentially important cypher rules.
+
+Here's a list of my key concessions & assumptions:
+
+L as S/SH	No given samples of singular L becoming SH						L is only cyphered into S, SH only comes from LL
+R as W/M	No given samples of R becoming W, "rrr" is contradicted by the "heretic" sample		R is only cyphered into M
+U as W/'WA	No given samples of U becoming W, human - anwamum is cleaner than an'waamum		Assumed only 'WA at the start of words
+EA as U		Derived from the "ahead" - "ua'uk" sample, could also result from ea -> uu -> u		Assumed EA is cyphered to a single U
+Y(not at end)	Only cypher outputs of Y are for the end of a word (e.g. not yellow, cypher, etc.)	Words where a Y is not the last letter are rejected
+Y("I")		No cypher output is given for the Y("I") sound (e.g. why).				Warning is output when a word ends in Y, "I" & other Y sounds default to Y("ee")
+Q missing	No cypher output given for Q								Words containing the letter Q are rejected
+Z missing	No cypher output given for Z								Words containing the letter Z are rejected
+
+
+
