@@ -46,7 +46,7 @@ decypherSingles = (("a", ("g", "h", "o"))
                     ,("l", ())
                     ,("m", ("n", "r"))
                     ,("n", ())
-                    ,("o", ["ee"])
+                    ,("o", ["ee"])  # ["ee"] used, as ("ee") is simplified to "ee"
                     ,("p", ("th", "m", "t"))
                     ,("q", ())
                     ,("r", ("b", "c", "j", "k"))
@@ -151,6 +151,11 @@ def resolveO(word, i):
             elif (word[i+1] == "h"):
                 oh = True
 
+            # E.g. Ok
+            elif (word[i+1] == "k"):
+                oh = True
+                
+
     # Return the character associated with the sound
     if (oh):
         return "a"
@@ -204,7 +209,7 @@ def tryGetDouble(word, i):
                 return double[1]
     return ""
 
-
+# Returns the cyphered version of a word
 def cypherWord(word):
 
     # If word already exists in the word bank, return it
