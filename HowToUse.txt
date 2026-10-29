@@ -78,4 +78,4 @@ Q missing	No cypher output given for Q								Words containing the letter Q are 
 Z missing	No cypher output given for Z								Words containing the letter Z are rejected
 
 
-
+Programmed in python, compiled using Auto PY to EXE.
